@@ -37,7 +37,8 @@ venv.bak/
 
 # Uploads and storage
 uploads/
-storage/
+/storage/
+!app/storage/
 
 # IDE
 .vscode/
