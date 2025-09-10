@@ -6,13 +6,13 @@ services:
     ports:
       - "51955:51955"
     environment:
-      - DATABASE_URL=sqlite:///./doc_ingestion.db
+      - DATABASE_URL=sqlite:///./data/doc_ingestion.db
       - SECRET_KEY=production-secret-key
       - DEFAULT_API_KEY=production-api-key
       - DEBUG=false
     volumes:
       - ./uploads:/app/uploads
-      - ./doc_ingestion.db:/app/doc_ingestion.db
+      - ./data:/app/data
     restart: unless-stopped
 
   frontend:
